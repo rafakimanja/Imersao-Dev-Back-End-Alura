@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "Repositorio usado para a Imersão Dev Back-End usando Node com a IA do Google o Gemini",
   "main": "server.js",
+  "type": "module",
   "scripts": {
+    "dev": "node --watch --env-file=.env server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "mongodb": "^6.10.0"
   }
 }

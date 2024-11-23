@@ -13,3 +13,10 @@ export async function criarPost(novoPost) {
     const colecao = db.collection("Posts")
     return colecao.insertOne(novoPost)
 }
+
+export async function atualizarPost(id, novoPost) {
+    const db = conexao.db("Imersao-Instabytes")
+    const colecao = db.collection("Posts")
+    const objID = ObjectId.createFromHexString(id)
+    return colecao.updateOne({_id: newObjectId(objID)}, {$set: novoPost})
+}
